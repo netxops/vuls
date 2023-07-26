@@ -523,3 +523,9 @@ type CweDictEntry struct {
 	CweTopTwentyfives  map[string]string `json:"cweTopTwentyfives"`
 	SansTopTwentyfives map[string]string `json:"sansTopTwentyfives"`
 }
+
+type ScanVulnResult struct {
+	Family  string `json:"family"`
+	Release string `json:"release"`
+	VulnInfos
+}

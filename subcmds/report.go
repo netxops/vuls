@@ -313,7 +313,7 @@ func (p *ReportCmd) Execute(_ context.Context, f *flag.FlagSet, _ ...interface{}
 	}
 
 	if p.toHTTP {
-		reports = append(reports, reporter.HTTPRequestWriter{URL: config.Conf.HTTP.URL})
+		reports = append(reports, reporter.HTTPRequestWriter{URL: config.Conf.HTTP.URL, Token: config.Conf.HTTP.Token})
 	}
 
 	if p.toLocalFile {

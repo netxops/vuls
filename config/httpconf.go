@@ -10,6 +10,7 @@ import (
 type HTTPConf struct {
 	URL     string `valid:"url" json:"-"`
 	Enabled bool   `toml:"-" json:"-"`
+	Token   string `json:"-"`
 }
 
 const httpKey = "VULS_HTTP_URL"
