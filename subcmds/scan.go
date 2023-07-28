@@ -181,7 +181,7 @@ func (p *ScanCmd) Execute(_ context.Context, f *flag.FlagSet, _ ...interface{}) 
 
 	if err := s.Scan(); err != nil {
 		logging.Log.Errorf("Failed to scan: %+v", err)
-		return subcommands.ExitFailure
+		//return subcommands.ExitFailure
 	}
 
 	fmt.Printf("\n\n\n")

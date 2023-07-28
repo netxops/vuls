@@ -161,6 +161,7 @@ func formatScanSummary(rs ...models.ScanResult) string {
 		if len(r.Errors) == 0 {
 			cols = []interface{}{
 				r.FormatServerName(),
+				r.IPv4Addrs,
 				fmt.Sprintf("%s%s", r.Family, r.Release),
 				r.FormatUpdatablePkgsSummary(),
 			}

@@ -367,12 +367,13 @@ func (p *ReportCmd) Execute(_ context.Context, f *flag.FlagSet, _ ...interface{}
 	for _, w := range reports {
 		if err := w.Write(res...); err != nil {
 			logging.Log.Errorf("Failed to report. err: %+v", err)
-			return subcommands.ExitFailure
+			//return subcommands.ExitFailure
 		}
 	}
 
 	if hasError {
-		return subcommands.ExitFailure
+		logging.Log.Errorf("has err")
+		//return subcommands.ExitFailure
 	}
 
 	return subcommands.ExitSuccess
